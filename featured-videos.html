@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprunki Incredibox Featured Videos | Watch Amazing Mixes</title>
+    <meta name="description" content="Watch featured Sprunki Incredibox videos and mixes created by our talented community. Get inspired and see what's possible with Sprunki!">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sprunki Incredibox Featured Videos</h1>
+        <p>Discover amazing mixes and creations!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="PlaySprunki.html">Play Sprunki</a></li>
+            <li><a href="game-intro.html">Game Intro</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="tutorials.html">Tutorials</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="Featured-Videos.html">Featured Videos</a></li>
+            <li><a href="update-log.html">Update Log</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="featured-videos" class="section">
+            <h2>Featured Sprunki Videos</h2>
+            <p>Check out these amazing Sprunki Incredibox mixes and creations from our community!</p>
+            <div id="video-grid" class="video-grid">
+                <!-- Videos will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <section id="submit-video" class="section">
+            <h2>Submit Your Video</h2>
+            <p>Have you created an awesome Sprunki mix? Share it with the community!</p>
+            <p>To submit your video, please send us the link to your YouTube or Vimeo upload at <a href="mailto:submissions@sprunki.com">submissions@sprunki.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sprunki.com All rights reserved.</p>
+        <nav>
+            <a href="privacy-policy.html">Privacy Policy</a> |
+            <a href="terms-of-service.html">Terms of Service</a> |
+            <a href="sitemap.html">Sitemap</a>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // List of videos (same as in the original HTML)
+        const videos = [
+            { src: "87%20(incredibox%20sprunki)%20(twblood).mp4", title: "87 (incredibox sprunki) (twblood)" },
+            { src: "BULLSEYE_Incredibox_Sprunki_mix.mp4", title: "BULLSEYE Incredibox Sprunki mix" },
+            { src: "F.U.N%20-%20A%20Sprunki%20Mix%20(Incredibox).mp4", title: "F.U.N - A Sprunki Mix (Incredibox)" },
+            { src: "FW%20put%20the%20knife%20away%20sprunki.mp4", title: "FW put the knife away sprunki" },
+            { src: "Gray%20s%20HIDEAWAY%20*%20Incredibox%20Sprunki%20mix%20*%20READ%20DESCRIPTION.mp4", title: "Gray s HIDEAWAY * Incredibox Sprunki mix * READ DESCRIPTION" },
+            { src: "Incredibox%20Sprunki%20-%20They%20are%20not%20real..mp4", title: "Incredibox Sprunki - They are not real." },
+            { src: "Playing%20Sprunki%20for%20the%20first%20time%20O3O%20%23incredibox%20%23sprunki%20%23incrediboxmod.mp4", title: "Playing Sprunki for the first time O3O #incredibox #sprunki #incrediboxmod" },
+            { src: "Sprunki%20Mix%20-%20_%20-%20Hello!%20%5BIncredibox%5D.mp4", title: "Sprunki Mix - _ - Hello! [Incredibox]" },
+            { src: "Sprunki%20Mix%20_%20Traveling%20The%20Unknown.mp4", title: "Sprunki Mix _ Traveling The Unknown" },
+            { src: "Sprunki%20Mix_%20FUN%20adventure.mp4", title: "Sprunki Mix_ FUN adventure" },
+            { src: "Sprunki%20but%20too%20kID%20frIEndly%20animation%20tw%20gore%20and%20blood.mp4", title: "Sprunki but too kID frIEndly animation tw gore and blood" },
+            { src: "Sprunki%20mix%20cause%20I%20love%20it.mp4", title: "Sprunki mix cause I love it" },
+            { src: "Sprunki.mp4", title: "Sprunki" },
+            { src: "TW_%20RACISM%20SIMON%20GETS%20VIOLATED%20__%20Incredibox%20Sprunki.mp4", title: "TW_ RACISM SIMON GETS VIOLATED __ Incredibox Sprunki" },
+            { src: "The%20teachings%20of%20Mr.%20Tree!%20-%20an%20incredibox%20Sprunki%20mix.mp4", title: "The teachings of Mr. Tree! - an incredibox Sprunki mix" },
+            { src: "untitled%20sprunki%20mix.mp4", title: "untitled sprunki mix" },
+            { src: "wenda%20teaches%20math%20(incredibox%20sprunki).mp4", title: "wenda teaches math (incredibox sprunki)" }
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const videoGrid = document.getElementById('video-grid');
+            
+            // Load each video
+            videos.forEach(video => {
+                loadVideo(video.src, video.title, videoGrid);
+            });
+        });
+    </script>
+</body>
+</html>

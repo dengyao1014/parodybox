@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters - Music Creation Game</title>
+    <meta name="description" content="Meet our unique music creation characters">
+    <link rel="stylesheet" href="modern-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .character-detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .character-detail-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .character-detail-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .character-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .character-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 0.5rem;
+            background: var(--background-color);
+            border-radius: 5px;
+        }
+
+        .character-abilities {
+            margin-top: 1rem;
+        }
+
+        .ability-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .ability-item i {
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .character-preview {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .preview-button {
+            background: var(--gradient);
+            color: var(--white);
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .preview-button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>MusicMixer</h1>
+            </div>
+            <button class="mobile-menu" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="modern-index.html">Home</a></li>
+                <li><a href="modern-index.html#play">Play Now</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding-top: 80px;">
+        <section class="character-section">
+            <div class="container">
+                <h2>Meet Our Characters</h2>
+                <p>Each character brings unique abilities and sounds to your music creation</p>
+                
+                <div class="character-detail-grid">
+                    <!-- Character cards will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Creating innovative music experiences</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="modern-index.html">Home</a></li>
+                        <li><a href="modern-index.html#play">Play Now</a></li>
+                        <li><a href="#characters">Characters</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MusicMixer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="modern-script.js"></script>
+    <script>
+        // Detailed character data
+        const detailedCharacters = [
+            {
+                name: "Beatbox Master",
+                description: "The rhythm specialist who can create complex beat patterns",
+                icon: "🎵",
+                stats: {
+                    rhythm: 95,
+                    power: 80,
+                    style: 85,
+                    versatility: 90
+                },
+                abilities: [
+                    "Complex Beat Creation",
+                    "Rhythm Manipulation",
+                    "Bass Enhancement",
+                    "Tempo Control"
+                ]
+            },
+            {
+                name: "Melody Maker",
+                description: "Creates beautiful melodies that touch the soul",
+                icon: "🎼",
+                stats: {
+                    harmony: 95,
+                    creativity: 90,
+                    emotion: 95,
+                    technique: 85
+                },
+                abilities: [
+                    "Melody Generation",
+                    "Harmony Creation",
+                    "Emotional Expression",
+                    "Musical Flow"
+                ]
+            },
+            {
+                name: "Bass King",
+                description: "Master of deep, resonating bass lines",
+                icon: "🎸",
+                stats: {
+                    power: 95,
+                    depth: 90,
+                    groove: 85,
+                    impact: 95
+                },
+                abilities: [
+                    "Deep Bass Lines",
+                    "Groove Creation",
+                    "Sound Layering",
+                    "Rhythm Support"
+                ]
+            },
+            {
+                name: "Effect Wizard",
+                description: "Adds magical effects to enhance any mix",
+                icon: "✨",
+                stats: {
+                    creativity: 95,
+                    uniqueness: 90,
+                    innovation: 95,
+                    style: 85
+                },
+                abilities: [
+                    "Sound Effects",
+                    "Atmosphere Creation",
+                    "Mix Enhancement",
+                    "Transition Magic"
+                ]
+            }
+        ];
+
+        // Function to create character cards
+        function createCharacterCards() {
+            const grid = document.querySelector('.character-detail-grid');
+            
+            detailedCharacters.forEach(char => {
+                const card = document.createElement('div');
+                card.className = 'character-detail-card';
+                
+                const statsHtml = Object.entries(char.stats)
+                    .map(([key, value]) => `
+                        <div class="stat-item">
+                            <strong>${key}</strong>
+                            <div>${value}%</div>
+                        </div>
+                    `).join('');
+                
+                const abilitiesHtml = char.abilities
+                    .map(ability => `
+                        <div class="ability-item">
+                            <i class="fas fa-star"></i>
+                            <span>${ability}</span>
+                        </div>
+                    `).join('');
+                
+                card.innerHTML = `
+                    <div class="character-image">${char.icon}</div>
+                    <h3>${char.name}</h3>
+                    <p>${char.description}</p>
+                    <div class="character-stats">
+                        ${statsHtml}
+                    </div>
+                    <div class="character-abilities">
+                        <h4>Special Abilities</h4>
+                        ${abilitiesHtml}
+                    </div>
+                    <div class="character-preview">
+                        <button class="preview-button" onclick="previewCharacter('${char.name}')">
+                            Preview Sounds
+                        </button>
+                    </div>
+                `;
+                
+                grid.appendChild(card);
+            });
+        }
+
+        // Function to preview character sounds
+        function previewCharacter(characterName) {
+            // This would be connected to your audio system
+            alert(`Playing preview sounds for ${characterName}... (Audio system to be implemented)`);
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', () => {
+            createCharacterCards();
+        });
+    </script>
+</body>
+</html>
